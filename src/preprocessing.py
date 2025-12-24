@@ -5,6 +5,15 @@ from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.impute import SimpleImputer
 
+
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_PATH = os.path.join(
+    BASE_DIR, "data", "raw", "WA_Fn-UseC_-Telco-Customer-Churn.csv"
+)
+
+
 def load_and_prepare_data(path):
     df = pd.read_csv(path)
 

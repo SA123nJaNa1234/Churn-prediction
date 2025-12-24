@@ -10,7 +10,7 @@ data/raw/*.csv
 data/processed/
 
 # Models
-models/*.pkl
+#models/*.pkl
 
 # Env
 .venv

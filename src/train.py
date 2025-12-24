@@ -3,10 +3,10 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import cross_val_score
 from joblib import dump
 
-from preprocessing import load_and_prepare_data, build_preprocessor
+from preprocessing import DATA_PATH, load_and_prepare_data, build_preprocessor
 
 X_train, X_test, y_train, y_test = load_and_prepare_data(
-    "../data/raw/telco_churn.csv"
+    DATA_PATH
 )
 
 preprocessor = build_preprocessor(X_train)
